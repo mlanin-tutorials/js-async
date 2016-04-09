@@ -26,12 +26,13 @@ var App = {
       App[functionName].apply(null, item)
     }
   },
+
   /**
    * Handle already registered actions.
    * 
    * @param  {Array} array History of calls
    */
-  _processPushes: function (array) {
+  _processHistory: function (array) {
     for (var i = 0; i < array.length; i++) {
       App.push(array[i])
     }
@@ -39,5 +40,5 @@ var App = {
 } 
 
 if (typeof registeredActions !== 'undefined') {
-  App._processPushes(registeredActions)
+  App._processHistory(registeredActions)
 }
