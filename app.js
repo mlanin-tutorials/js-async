@@ -1,5 +1,6 @@
+var registeredActions = [];
 if (typeof App !== 'undefined') {
-  var registeredActions = App
+  registeredActions = App;
 }
 
 var App = {
@@ -39,6 +40,4 @@ var App = {
   }
 } 
 
-if (typeof registeredActions !== 'undefined') {
-  App._processHistory(registeredActions)
-}
+App._processHistory(registeredActions)
